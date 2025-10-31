@@ -10,16 +10,16 @@ extern int warning_count;
 extern warning_t warnings[];
 
 static const char *TAG = "WEB_SERVER";
-extern const uint8_t servo_html_start[] asm("_binary_servo_html_start");
-extern const uint8_t servo_html_end[]   asm("_binary_servo_html_end");
+// extern const uint8_t servo_html_start[] asm("_binary_servo_html_start");
+// extern const uint8_t servo_html_end[]   asm("_binary_servo_html_end");
 
 /* ======== HANDLERS ======== */
-esp_err_t root_get_handler(httpd_req_t *req)
-{
-    httpd_resp_set_type(req, "text/html");
-    httpd_resp_send(req, (const char *)servo_html_start, servo_html_end - servo_html_start);
-    return ESP_OK;
-}
+// esp_err_t root_get_handler(httpd_req_t *req)
+// {
+//     httpd_resp_set_type(req, "text/html");
+//     httpd_resp_send(req, (const char *)servo_html_start, servo_html_end - servo_html_start);
+//     return ESP_OK;
+// }
 
 esp_err_t warning_handler(httpd_req_t *req)
 {
@@ -99,7 +99,7 @@ void start_web_server(void)
 
     if (httpd_start(&server, &config) == ESP_OK)
     {
-        httpd_register_uri_handler(server, &(httpd_uri_t){"/", HTTP_GET, root_get_handler, NULL});
+        // httpd_register_uri_handler(server, &(httpd_uri_t){"/", HTTP_GET, root_get_handler, NULL});
         httpd_register_uri_handler(server, &(httpd_uri_t){"/servo", HTTP_GET, servo_handler, NULL});
         httpd_register_uri_handler(server, &(httpd_uri_t){"/relay", HTTP_GET, relay_handler, NULL});
         httpd_register_uri_handler(server, &(httpd_uri_t){"/sensor", HTTP_GET, sensor_handler, NULL});
