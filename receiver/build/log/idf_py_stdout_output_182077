@@ -1,0 +1,78 @@
+[0/1] Re-running CMake...
+-- git rev-parse returned 'fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 3 dependencies:
+NOTICE: [1/3] espressif/cmake_utilities (0.5.3)
+NOTICE: [2/3] lvgl/lvgl (9.4.0)
+NOTICE: [3/3] idf (5.3.0)
+-- Project sdkconfig file /home/hiep/Hiep/tft/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "TFT" version: 1
+-- Adding linker script /home/hiep/Hiep/tft/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/hiep/Hiep/tft/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/hiep/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- ESP_LCD_ILI9341: 2.0.1
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_lcd_ili9341 esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_vfs_console esp_wifi espcoredump espressif__cmake_utilities esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lvgl__lvgl lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/hiep/esp-idf/components/app_trace /home/hiep/esp-idf/components/app_update /home/hiep/esp-idf/components/bootloader /home/hiep/esp-idf/components/bootloader_support /home/hiep/esp-idf/components/bt /home/hiep/esp-idf/components/cmock /home/hiep/esp-idf/components/console /home/hiep/esp-idf/components/cxx /home/hiep/esp-idf/components/driver /home/hiep/esp-idf/components/efuse /home/hiep/esp-idf/components/esp-tls /home/hiep/esp-idf/components/esp_adc /home/hiep/esp-idf/components/esp_app_format /home/hiep/esp-idf/components/esp_bootloader_format /home/hiep/esp-idf/components/esp_coex /home/hiep/esp-idf/components/esp_common /home/hiep/esp-idf/components/esp_driver_ana_cmpr /home/hiep/esp-idf/components/esp_driver_cam /home/hiep/esp-idf/components/esp_driver_dac /home/hiep/esp-idf/components/esp_driver_gpio /home/hiep/esp-idf/components/esp_driver_gptimer /home/hiep/esp-idf/components/esp_driver_i2c /home/hiep/esp-idf/components/esp_driver_i2s /home/hiep/esp-idf/components/esp_driver_isp /home/hiep/esp-idf/components/esp_driver_jpeg /home/hiep/esp-idf/components/esp_driver_ledc /home/hiep/esp-idf/components/esp_driver_mcpwm /home/hiep/esp-idf/components/esp_driver_parlio /home/hiep/esp-idf/components/esp_driver_pcnt /home/hiep/esp-idf/components/esp_driver_ppa /home/hiep/esp-idf/components/esp_driver_rmt /home/hiep/esp-idf/components/esp_driver_sdio /home/hiep/esp-idf/components/esp_driver_sdm /home/hiep/esp-idf/components/esp_driver_sdmmc /home/hiep/esp-idf/components/esp_driver_sdspi /home/hiep/esp-idf/components/esp_driver_spi /home/hiep/esp-idf/components/esp_driver_tsens /home/hiep/esp-idf/components/esp_driver_uart /home/hiep/esp-idf/components/esp_driver_usb_serial_jtag /home/hiep/esp-idf/components/esp_eth /home/hiep/esp-idf/components/esp_event /home/hiep/esp-idf/components/esp_gdbstub /home/hiep/esp-idf/components/esp_hid /home/hiep/esp-idf/components/esp_http_client /home/hiep/esp-idf/components/esp_http_server /home/hiep/esp-idf/components/esp_https_ota /home/hiep/esp-idf/components/esp_https_server /home/hiep/esp-idf/components/esp_hw_support /home/hiep/esp-idf/components/esp_lcd /home/hiep/Hiep/tft/components/esp_lcd_ili9341 /home/hiep/esp-idf/components/esp_local_ctrl /home/hiep/esp-idf/components/esp_mm /home/hiep/esp-idf/components/esp_netif /home/hiep/esp-idf/components/esp_netif_stack /home/hiep/esp-idf/components/esp_partition /home/hiep/esp-idf/components/esp_phy /home/hiep/esp-idf/components/esp_pm /home/hiep/esp-idf/components/esp_psram /home/hiep/esp-idf/components/esp_ringbuf /home/hiep/esp-idf/components/esp_rom /home/hiep/esp-idf/components/esp_system /home/hiep/esp-idf/components/esp_timer /home/hiep/esp-idf/components/esp_vfs_console /home/hiep/esp-idf/components/esp_wifi /home/hiep/esp-idf/components/espcoredump /home/hiep/Hiep/tft/managed_components/espressif__cmake_utilities /home/hiep/esp-idf/components/esptool_py /home/hiep/esp-idf/components/fatfs /home/hiep/esp-idf/components/freertos /home/hiep/esp-idf/components/hal /home/hiep/esp-idf/components/heap /home/hiep/esp-idf/components/http_parser /home/hiep/esp-idf/components/idf_test /home/hiep/esp-idf/components/ieee802154 /home/hiep/esp-idf/components/json /home/hiep/esp-idf/components/log /home/hiep/Hiep/tft/managed_components/lvgl__lvgl /home/hiep/esp-idf/components/lwip /home/hiep/Hiep/tft/main /home/hiep/esp-idf/components/mbedtls /home/hiep/esp-idf/components/mqtt /home/hiep/esp-idf/components/newlib /home/hiep/esp-idf/components/nvs_flash /home/hiep/esp-idf/components/nvs_sec_provider /home/hiep/esp-idf/components/openthread /home/hiep/esp-idf/components/partition_table /home/hiep/esp-idf/components/perfmon /home/hiep/esp-idf/components/protobuf-c /home/hiep/esp-idf/components/protocomm /home/hiep/esp-idf/components/pthread /home/hiep/esp-idf/components/sdmmc /home/hiep/esp-idf/components/soc /home/hiep/esp-idf/components/spi_flash /home/hiep/esp-idf/components/spiffs /home/hiep/esp-idf/components/tcp_transport /home/hiep/esp-idf/components/ulp /home/hiep/esp-idf/components/unity /home/hiep/esp-idf/components/usb /home/hiep/esp-idf/components/vfs /home/hiep/esp-idf/components/wear_levelling /home/hiep/esp-idf/components/wifi_provisioning /home/hiep/esp-idf/components/wpa_supplicant /home/hiep/esp-idf/components/xtensa
+-- Configuring done (3.8s)
+-- Generating done (0.5s)
+-- Build files have been written to: /home/hiep/Hiep/tft/build
+[1/18] Generating ../../servo.html.S
+[2/18] Performing build step for 'bootloader'
+[1/1] cd /home/hiep/Hiep/tft/build/bootloader/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/hiep/Hiep/tft/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[3/18] No install step for 'bootloader'
+[4/18] Completed 'bootloader'
+[5/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[6/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/servo/feeder.c.obj
+In file included from /home/hiep/Hiep/tft/main/servo/feeder.c:1:
+/home/hiep/esp-idf/components/driver/deprecated/driver/mcpwm.h:15:2: warning: #warning "legacy MCPWM driver is deprecated, please migrate to the new driver (include driver/mcpwm_prelude.h)" [-Wcpp]
+   15 | #warning "legacy MCPWM driver is deprecated, please migrate to the new driver (include driver/mcpwm_prelude.h)"
+      |  ^~~~~~~
+[7/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/espnow_recv/espnow_recv.c.obj
+In file included from /home/hiep/esp-idf/components/esp_wifi/include/esp_now.h:11,
+                 from /home/hiep/Hiep/tft/main/espnow_recv/espnow_recv.c:2:
+/home/hiep/Hiep/tft/main/espnow_recv/espnow_recv.c: In function 'espnow_init':
+/home/hiep/Hiep/tft/main/espnow_recv/espnow_recv.c:42:46: warning: passing argument 1 of 'esp_now_register_recv_cb' from incompatible pointer type [-Wincompatible-pointer-types]
+   42 |     ESP_ERROR_CHECK(esp_now_register_recv_cb(recv_cb));
+      |                                              ^~~~~~~
+      |                                              |
+      |                                              void (*)(const uint8_t *, const uint8_t *, int) {aka void (*)(const unsigned char *, const unsigned char *, int)}
+/home/hiep/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/hiep/esp-idf/components/esp_wifi/include/esp_now.h:158:54: note: expected 'esp_now_recv_cb_t' {aka 'void (*)(const struct esp_now_recv_info *, const unsigned char *, int)'} but argument is of type 'void (*)(const uint8_t *, const uint8_t *, int)' {aka 'void (*)(const unsigned char *, const unsigned char *, int)'}
+  158 | esp_err_t esp_now_register_recv_cb(esp_now_recv_cb_t cb);
+      |                                    ~~~~~~~~~~~~~~~~~~^~
+[8/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/web/web_server.c.obj
+[9/18] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/servo.html.S.obj
+[10/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/motor/motor.c.obj
+[11/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/tft/tft.c.obj
+/home/hiep/Hiep/tft/main/tft/tft.c: In function 'tft_display_data':
+/home/hiep/Hiep/tft/main/tft/tft.c:163:14: warning: unused variable 'blue_title' [-Wunused-variable]
+  163 |     uint16_t blue_title  = 0x001F; // Xanh đậm
+      |              ^~~~~~~~~~
+[12/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi/wifi.c.obj
+[13/18] Linking C static library esp-idf/main/libmain.a
+[14/18] Generating ld/sections.ld
+info: INFO: Symbol IDF_TARGET_LINUX defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /home/hiep/esp-idf/Kconfig:162
+    /home/hiep/esp-idf/Kconfig:78
+[15/18] Building C object CMakeFiles/TFT.elf.dir/project_elf_src_esp32.c.obj
+[16/18] Linking CXX executable TFT.elf
+[17/18] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/hiep/Hiep/tft/build/TFT.bin
+[18/18] cd /home/hiep/Hiep/tft/build/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hiep/Hiep/tft/build/partition_table/partition-table.bin /home/hiep/Hiep/tft/build/TFT.bin
+TFT.bin binary size 0x2dd00 bytes. Smallest app partition is 0x100000 bytes. 0xd2300 bytes (82%) free.

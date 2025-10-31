@@ -1,0 +1,51 @@
+{
+  "files.associations": {
+    "string.h": "c",
+    "stdio.h": "c",
+    "freertos.h": "c",
+    "task.h": "c",
+    "esp_lcd_panel_vendor.h": "c",
+    "esp_lcd_panel_ssd1306.h": "c",
+    "esp_lcd_panel_st7789.h": "c",
+    "esp_lcd_panel_nt35510.h": "c",
+    "spi_master.h": "c",
+    "esp_lcd_panel_commands.h": "c",
+    "esp_lcd_panel_ops.h": "c",
+    "cdefs.h": "c",
+    "esp_lcd_types.h": "c",
+    "esp_lcd_ili9341.h": "c",
+    "esp_lcd_panel_io.h": "c",
+    "disp_spi.h": "c",
+    "lvgl_helpers.h": "c",
+    "lvgl.h": "c",
+    "gpio.h": "c",
+    "esp_log.h": "c",
+    "esp_err.h": "c",
+    "font8x8_basic.h": "c",
+    "esp_wifi.h": "c",
+    "nvs_flash.h": "c",
+    "espnow_recv.h": "c",
+    "tft.h": "c",
+    "stdint.h": "c",
+    "feeder.h": "c",
+    "esp_event.h": "c",
+    "wifi.h": "c",
+    "esp_http_server.h": "c",
+    "esp_netif.h": "c",
+    "motor.h": "c"
+  },
+  "idf.port": "/dev/ttyUSB0",
+  "idf.openOcdConfigs": [
+    "interface/ftdi/esp32_devkitj_v1.cfg",
+    "target/esp32.cfg"
+  ],
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32"
+  },
+  "clangd.path": "/home/hiep/.espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=/home/hiep/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
+    "--compile-commands-dir=/home/hiep/Hiep/tft/build"
+  ]
+}

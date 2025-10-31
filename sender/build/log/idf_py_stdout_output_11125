@@ -1,0 +1,133 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 17 2025 20:15:09[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=255cch (153036) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=000355f4 vaddr=3ffbdb60 size=0588ch ( 22668) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ae88 vaddr=40080000 size=05190h ( 20880) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=96ac8h (617160) map[0m
+[0;32mI (386) esp_image: segment 4: paddr=000d6af0 vaddr=40085190 size=148d8h ( 84184) load[0m
+[0;32mI (432) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (432) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (453) app_init: Application information:[0m
+[0;32mI (456) app_init: Project name:     PBL[0m
+[0;32mI (460) app_init: App version:      1[0m
+[0;32mI (464) app_init: Compile time:     Oct 17 2025 20:15:10[0m
+[0;32mI (470) app_init: ELF file SHA256:  99478b314...[0m
+[0;32mI (476) app_init: ESP-IDF:          v5.3-dirty[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (486) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (491) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (496) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (503) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFC7D80 len 00018280 (96 KiB): DRAM[0m
+[0;32mI (515) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (521) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 40099A68 len 00006598 (25 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (539) spi_flash: flash io: dio[0m
+[0;33mW (542) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (556) mcpwm(legacy): legacy driver is deprecated, please migrate to `driver/mcpwm_prelude.h`[0m
+[0;33mW (565) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (576) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (585) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (590) main_task: Started on CPU0[0m
+[0;32mI (600) main_task: Calling app_main()[0m
+[0;32mI (640) wifi:wifi driver task: 3ffb7f6c, prio:23, stack:6656, core=0[0m
+[0;32mI (650) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (650) wifi:wifi certification version: v7.0[0m
+[0;32mI (650) wifi:config NVS flash: enabled[0m
+[0;32mI (650) wifi:config nano formating: disabled[0m
+[0;32mI (660) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (660) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (670) wifi:Init management short buffer num: 32[0m
+[0;32mI (670) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (680) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (680) wifi:Init static rx buffer num: 10[0m
+[0;32mI (680) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (690) wifi_init: rx ba win: 6[0m
+[0;32mI (690) wifi_init: accept mbox: 6[0m
+[0;32mI (690) wifi_init: tcpip mbox: 32[0m
+[0;32mI (700) wifi_init: udp mbox: 6[0m
+[0;32mI (700) wifi_init: tcp mbox: 6[0m
+[0;32mI (710) wifi_init: tcp tx win: 5760[0m
+[0;32mI (710) wifi_init: tcp rx win: 5760[0m
+[0;32mI (710) wifi_init: tcp mss: 1440[0m
+[0;32mI (720) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (720) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (730) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (820) wifi:mode : sta (c8:2e:18:25:fa:60)[0m
+[0;32mI (820) wifi:enable tsf[0m
+[0;32mI (820) WIFI: WiFi initialization complete[0m
+[0;32mI (820) WIFI: Connecting to WiFi...[0m
+[0;32mI (830) SENSOR: ADC initialized for pH, TDS, Turbidity sensors.[0m
+[0;32mI (830) DS18B20_BB: DS18B20 presence detected on GPIO 26[0m
+[0;32mI (840) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (840) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (850) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (860) OLED: OLED initialized[0m
+[0;32mI (860) WEB_SERVER: Web server started[0m
+[0;32mI (860) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (870) wifi:<ba-add>idx:0 (ifx:0, 72:85:c4:83:2f:43), tid:5, ssn:0, winSize:64[0m
+[0;32mI (980) wifi:<ba-add>idx:1 (ifx:0, 72:85:c4:83:2f:43), tid:0, ssn:0, winSize:64[0m
+[0;32mI (980) wifi:connected with Cali House, aid = 12, channel 5, BW20, bssid = 72:85:c4:83:2f:43[0m
+[0;32mI (980) wifi:security: WPA2-PSK, phy: bgn, rssi: -52[0m
+[0;32mI (990) wifi:pm start, type: 1[0m
+
+[0;32mI (990) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1050) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1620) DS18B20_BB: Temperature = 28.94°C[0m
+[0;32mI (1630) SENSOR: pH Raw: 3958 | Volt: 3.190 | pH: 4.59[0m
+[0;32mI (1630) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (1630) SENSOR: TURB Raw: 4095 | Volt: 3.300 | NTU: 0.0[0m
+[0;32mI (2000) esp_netif_handlers: sta ip: 192.168.1.22, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2000) WIFI: ✅ Connected! IP: 192.168.1.22[0m
+[0;32mI (4390) DS18B20_BB: Temperature = 28.94°C[0m
+[0;32mI (4390) SENSOR: pH Raw: 3689 | Volt: 2.973 | pH: 5.35[0m
+[0;32mI (4390) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (4400) SENSOR: TURB Raw: 4095 | Volt: 3.300 | NTU: 0.0[0m
+[0;33mW (6100) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (6100) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (7150) DS18B20_BB: Temperature = 28.94°C[0m
+[0;32mI (7150) SENSOR: pH Raw: 3405 | Volt: 2.744 | pH: 6.15[0m
+[0;32mI (7150) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (7160) SENSOR: TURB Raw: 4095 | Volt: 3.300 | NTU: 0.0[0m
+[0;32mI (9910) DS18B20_BB: Temperature = 28.94°C[0m
+[0;32mI (9910) SENSOR: pH Raw: 3900 | Volt: 3.143 | pH: 4.75[0m
+[0;32mI (9910) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (9920) SENSOR: TURB Raw: 4095 | Volt: 3.300 | NTU: 0.0[0m
+[0;32mI (12680) DS18B20_BB: Temperature = 28.88°C[0m
+[0;32mI (12680) SENSOR: pH Raw: 3824 | Volt: 3.082 | pH: 4.96[0m
+[0;32mI (12680) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (12690) SENSOR: TURB Raw: 4095 | Volt: 3.300 | NTU: 0.0[0m
+[0;32mI (15450) DS18B20_BB: Temperature = 28.88°C[0m
+[0;32mI (15450) SENSOR: pH Raw: 3792 | Volt: 3.056 | pH: 5.05[0m
+[0;32mI (15450) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (15460) SENSOR: TURB Raw: 4095 | Volt: 3.300 | NTU: 0.0[0m
+[0;32mI (18220) DS18B20_BB: Temperature = 28.94°C[0m
+[0;32mI (18220) SENSOR: pH Raw: 3696 | Volt: 2.

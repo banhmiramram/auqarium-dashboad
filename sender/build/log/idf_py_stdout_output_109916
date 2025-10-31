@@ -1,0 +1,139 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 13 2025 11:16:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=27ed8h (163544) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00037f00 vaddr=3ffbdb60 size=05884h ( 22660) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=0003d78c vaddr=40080000 size=0288ch ( 10380) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=af124h (717092) map[0m
+[0;32mI (422) esp_image: segment 4: paddr=000ef14c vaddr=4008288c size=17398h ( 95128) load[0m
+[0;32mI (473) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (473) boot: Disabling RNG early entropy source...[0m
+[0;32mI (485) cpu_start: Multicore app[0m
+[0;32mI (493) cpu_start: Pro cpu start user code[0m
+[0;32mI (494) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (494) app_init: Application information:[0m
+[0;32mI (496) app_init: Project name:     PBL[0m
+[0;32mI (501) app_init: App version:      1[0m
+[0;32mI (505) app_init: Compile time:     Oct 14 2025 01:37:06[0m
+[0;32mI (511) app_init: ELF file SHA256:  87584d1f6...[0m
+[0;32mI (517) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (521) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (526) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (531) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (536) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (543) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (549) heap_init: At 3FFC83B0 len 00017C50 (95 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (568) heap_init: At 40099C24 len 000063DC (24 KiB): IRAM[0m
+[0;32mI (576) spi_flash: detected chip: generic[0m
+[0;32mI (579) spi_flash: flash io: dio[0m
+[0;33mW (583) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (596) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (607) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (616) coexist: coex firmware version: dab85ae96[0m
+[0;32mI (621) main_task: Started on CPU0[0m
+[0;32mI (631) main_task: Calling app_main()[0m
+[0;32mI (661) wifi:wifi driver task: 3ffb7ee8, prio:23, stack:6656, core=0[0m
+[0;32mI (671) wifi:wifi firmware version: 0caa81945[0m
+[0;32mI (671) wifi:wifi certification version: v7.0[0m
+[0;32mI (671) wifi:config NVS flash: enabled[0m
+[0;32mI (671) wifi:config nano formating: disabled[0m
+[0;32mI (671) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (681) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (681) wifi:Init management short buffer num: 32[0m
+[0;32mI (691) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (691) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (701) wifi:Init static rx buffer num: 10[0m
+[0;32mI (701) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (701) wifi_init: rx ba win: 6[0m
+[0;32mI (711) wifi_init: accept mbox: 6[0m
+[0;32mI (711) wifi_init: tcpip mbox: 32[0m
+[0;32mI (721) wifi_init: udp mbox: 6[0m
+[0;32mI (721) wifi_init: tcp mbox: 6[0m
+[0;32mI (721) wifi_init: tcp tx win: 5760[0m
+[0;32mI (731) wifi_init: tcp rx win: 5760[0m
+[0;32mI (731) wifi_init: tcp mss: 1440[0m
+[0;32mI (731) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (741) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (791) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (881) wifi:mode : sta (c8:2e:18:25:fa:60)[0m
+[0;32mI (881) wifi:enable tsf[0m
+[0;32mI (881) SENSOR: ADC initialized for pH, TDS, Turbidity sensors.[0m
+[0;32mI (891) DS18B20_BB: DS18B20 presence detected on GPIO 26[0m
+[0;32mI (891) OLED: OLED initialized[0m
+[0;32mI (931) OLED: Display text: ----AQUA MONITOR--------[0m
+[0;32mI (941) OLED: Display text: ------------------------[0m
+[0;32mI (951) MAIN: OLED initialized[0m
+[0;32mI (951) FEEDER: Feeder (servo) initialized[0m
+[0;32mI (1701) DS18B20_BB: Temperature = 30.81°C[0m
+[0;32mI (1701) SENSOR: pH Raw: 3786 | Volt: 3.051 | pH: 5.07[0m
+[0;32mI (1711) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (1711) SENSOR: TURB Raw: 3828 | Volt: 3.085 | NTU: 0.0[0m
+---------------------------------------------
+Temp: 30.81°C | pH: 5.07 | TDS: 0.0 ppm | NTU: 0.0
+[0;33mW (1721) MAIN: pH ngoài khoảng 6.5-8.5[0m
+[0;32mI (1731) OLED: Display text:                         [0m
+[0;32mI (1741) OLED: Display text:                         [0m
+[0;32mI (1751) OLED: Display text:                         [0m
+[0;32mI (1761) OLED: Display text:                         [0m
+[0;32mI (1771) OLED: Display text: T: 30.8C   pH: 5.07[0m
+[0;32mI (1781) OLED: Display text: TDS: 0 ppm[0m
+[0;32mI (1791) OLED: Display text: NTU: 0[0m
+[0;32mI (1791) OLED: Display text: ------------------------[0m
+[0;33mW (1801) MAIN: WiFi not connected, skipping data send[0m
+[0;32mI (3301) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (4551) DS18B20_BB: Temperature = 30.81°C[0m
+[0;32mI (4551) SENSOR: pH Raw: 3784 | Volt: 3.049 | pH: 5.08[0m
+[0;32mI (4551) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (4561) SENSOR: TURB Raw: 3835 | Volt: 3.090 | NTU: 0.0[0m
+---------------------------------------------
+Temp: 30.81°C | pH: 5.08 | TDS: 0.0 ppm | NTU: 0.0
+[0;33mW (4571) MAIN: pH ngoài khoảng 6.5-8.5[0m
+[0;32mI (4581) OLED: Display text:                         [0m
+[0;32mI (4591) OLED: Display text:                         [0m
+[0;32mI (4601) OLED: Display text:                         [0m
+[0;32mI (4611) OLED: Display text:                         [0m
+[0;32mI (4621) OLED: Display text: T: 30.8C   pH: 5.08[0m
+[0;32mI (4631) OLED: Display text: TDS: 0 ppm[0m
+[0;32mI (4641) OLED: Display text: NTU: 0[0m
+[0;32mI (4641) OLED: Display text: ------------------------[0m
+[0;33mW (4651) MAIN: WiFi not connected, skipping data send[0m
+[0;32mI (5711) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (7401) DS18B20_BB: Temperature = 30.81°C[0m
+[0;32mI (7401) SENSOR: pH Raw: 3573 | Volt: 2.879 | pH: 5.67[0m
+[0;32mI (7411) SENSOR: TDS Raw: 0 | Volt: 0.000 | ppm: 0.0[0m
+[0;32mI (7411) SENSOR: TURB Raw: 3830 | Volt: 3.086 | NTU: 0.0[0m
+---------------------------------------------
+Temp: 30.81°C | pH: 5.67 | TDS: 0.0 ppm | NTU: 0.0
+[0;33mW (7421) MAIN: pH ngoài khoảng 6.5-8.5[0m
+[0;32mI (7431) OLED: Display text:                         [0m
+[0;32mI (7441) OLED: Display text:                         [0m
+[0;32mI (7451) OLED: Display text:                         [0m
+[0;32mI (7461) OLED: Display text:                         [0m
+[0;32mI (7471) OLED: Display text: T: 30.8C   pH: 5.67[0m
+[0;32mI (7481) OLED: Display text: TDS: 0 ppm[0m
+[0;32mI (

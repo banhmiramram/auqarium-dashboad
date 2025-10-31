@@ -1,0 +1,23 @@
+[0/1] Re-running CMake...
+-- git rev-parse returned 'fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/cjson (1.7.19)
+NOTICE: [2/2] idf (5.3.0)
+-- Project sdkconfig file /home/hiep/Hiep/PBL/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "PBL" version: 1
+-- Adding linker script /home/hiep/Hiep/PBL/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/hiep/Hiep/PBL/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/hiep/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/hiep/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/hiep/Hiep/PBL -B/home/hiep/Hiep/PBL/build

@@ -1,0 +1,24 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "wifi/wifi.c"
+        "sensor/sensor.c"
+        "oled/oled.c"
+        "servo/feeder.c"
+        "ds18b20/ds18b20.c"
+        "web/web_server.c"
+    INCLUDE_DIRS
+        "."
+        "wifi"
+        "sensor"
+        "oled"
+        "servo"
+        "ds18b20"
+        "web"
+    REQUIRES
+        driver
+        esp_wifi
+        esp_http_server
+        freertos
+        nvs_flash
+)

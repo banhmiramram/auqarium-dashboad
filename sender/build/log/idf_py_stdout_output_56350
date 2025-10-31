@@ -1,0 +1,81 @@
+[1/5] cd /home/hiep/Hiep/PBL/build/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hiep/Hiep/PBL/build/partition_table/partition-table.bin /home/hiep/Hiep/PBL/build/PBL.bin
+PBL.bin binary size 0xfcfe0 bytes. Smallest app partition is 0x100000 bytes. 0x3020 bytes (1%) free.
+Warning: The smallest app partition is nearly full (1% free space left)!
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/hiep/Hiep/PBL/build/bootloader/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/hiep/Hiep/PBL/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/hiep/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/hiep/esp-idf -D "SERIAL_TOOL=/home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/hiep/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/hiep/Hiep/PBL/build -P /home/hiep/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 PBL.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c8:2e:18:25:fa:60
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0010cfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16355...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16355 compressed) at 0x00001000 in 0.5 seconds (effective 396.5 kbit/s)...
+Hash of data verified.
+Compressed 1036256 bytes to 646741...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d601... (5 %)
+Writing at 0x0002913c... (7 %)
+Writing at 0x0002de40... (10 %)
+Writing at 0x0003454d... (12 %)
+Writing at 0x00040b96... (15 %)
+Writing at 0x00046584... (17 %)
+Writing at 0x0004c704... (20 %)
+Writing at 0x000525f5... (22 %)
+Writing at 0x00058079... (25 %)
+Writing at 0x0005df49... (27 %)
+Writing at 0x00063ac5... (30 %)
+Writing at 0x000697f9... (32 %)
+Writing at 0x0006f65c... (35 %)
+Writing at 0x00075606... (37 %)
+Writing at 0x0007b302... (40 %)
+Writing at 0x00080fdf... (42 %)
+Writing at 0x00087497... (45 %)
+Writing at 0x0008c658... (47 %)
+Writing at 0x00091a84... (50 %)
+Writing at 0x000972cc... (52 %)
+Writing at 0x0009caba... (55 %)
+Writing at 0x000a1cba... (57 %)
+Writing at 0x000a7216... (60 %)
+Writing at 0x000acd0b... (62 %)
+Writing at 0x000b2898... (65 %)
+Writing at 0x000b8392... (67 %)
+Writing at 0x000bdffc... (70 %)
+Writing at 0x000c453d... (72 %)
+Writing at 0x000ca055... (75 %)
+Writing at 0x000cfc40... (77 %)
+Writing at 0x000d5499... (80 %)
+Writing at 0x000dacc1... (82 %)
+Writing at 0x000e486b... (85 %)
+Writing at 0x000ed6a9... (87 %)
+Writing at 0x000f3373... (90 %)
+Writing at 0x000f9175... (92 %)
+Writing at 0x000febf3... (95 %)
+Writing at 0x0010502f... (97 %)
+Writing at 0x0010a2c1... (100 %)
+Wrote 1036256 bytes (646741 compressed) at 0x00010000 in 14.6 seconds (effective 568.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1222.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
