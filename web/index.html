@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Aquarium Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <img src="https://dut.udn.vn/Files/admin/images/Tin_tuc/Khac/2020/LogoDUT/image002.jpg" alt="Logo Bách Khoa Đà Nẵng">
+    <h1>Aquarium Dashboard</h1>
+    <div id="clockBox">
+      <div id="date"><span class="icon">📅</span> <span id="dateText"></span></div>
+      <div id="clock"><span class="icon">🕒</span> <span id="clockText"></span></div>
+    </div>
+  </header>
+
+  <nav>
+    <button id="tabSensor" class="active" onclick="showTab('sensorTab', this)">📊 Monitor</button>
+    <button id="tabServo" onclick="showTab('servoTab', this)">⚙️ Control</button>
+  </nav>
+
+  <!-- TAB GIÁM SÁT -->
+  <div id="sensorTab" class="content active-tab">
+    <div class="sensor-layout">
+      <div class="sensor-column">
+        <div class="sensor-card">
+          <h3>Temperature</h3>
+          <div id="tempVal" class="sensor-value">-- °C</div>
+          <canvas id="tempMini"></canvas>
+        </div>
+        <div class="sensor-card">
+          <h3>pH</h3>
+          <div id="phVal" class="sensor-value">--</div>
+          <canvas id="phMini"></canvas>
+        </div>
+        <div class="sensor-card">
+          <h3>TDS</h3>
+          <div id="tdsVal" class="sensor-value">-- ppm</div>
+          <canvas id="tdsMini"></canvas>
+        </div>
+        <div class="sensor-card">
+          <h3>Turbidity</h3>
+          <div id="turbVal" class="sensor-value">-- NTU</div>
+          <canvas id="turbMini"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="sensorChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONTROL -->
+  <div id="servoTab" class="content">
+    <div class="control-layout">
+      <div class="control-left">
+        <div class="servo-buttons">
+          <h2>Control Servo</h2>
+          <button onclick="sendServo(0)">Close</button>
+          <button onclick="sendServo(180)">Open</button>
+        </div>
+
+        <div class="servo-buttons">
+          <h2>Control Relay</h2>
+          <button style="background-color:#28a745;" onclick="sendRelay('on')">Turn ON</button>
+          <button style="background-color:#dc3545;" onclick="sendRelay('off')">Turn OFF</button>
+          <p id="relayStatus" style="margin-top:15px;font-size:18px;color:#ccc;">Status: --</p>
+        </div>
+      </div>
+
+      <div class="control-right">
+        <div class="card">
+          <h2>⚠️ Lịch sử cảnh báo</h2>
+          <table id="alertTable" class="alert-table">
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Loại cảnh báo</th>
+                <th>Thông điệp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="empty"><td colspan="3">Chưa có cảnh báo nào</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

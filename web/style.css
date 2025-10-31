@@ -1,0 +1,237 @@
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    header img {
+      height: 55px;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+      margin: 0;
+      font-size: 35px;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px 0;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 16px;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav button:hover, nav button.active {
+      color: #00bcd4;
+    }
+
+    .content {
+      display: none;
+      padding: 20px;
+    }
+
+    .active-tab {
+      display: block;
+    }
+
+    /* Layout tổng cho tab Monitor */
+    .sensor-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    /* Cột bên trái */
+    .sensor-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+      max-width: 210px;
+    }
+
+    .sensor-card {
+      background-color: #1e1e1e;
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .sensor-card h3 {
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    .sensor-value {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+
+    .sensor-card canvas {
+      width: 100%;
+      height: 60px;
+      margin-top: 5px;
+    }
+
+    /* Biểu đồ to bên phải */
+    .chart-box {
+      flex: 3;
+      background-color: #1e1e1e;
+      border-radius: 16px;
+      padding: 50px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    /* Servo tab */
+    .servo-buttons {
+      background-color: #1e1e1e;
+      border-radius: 50px;
+      width: fit-content;
+      margin: 40px auto;
+      padding: 30px 40px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    .servo-buttons button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 20px;
+      transition: 0.3s;
+    }
+
+    .servo-buttons button:hover {
+      background-color: #019bb2;
+    }
+
+    #clockBox {
+      text-align: right;
+      min-width: 130px;
+      line-height: 1.4;
+    }
+
+    #clockBox .icon {
+      margin-right: 4px;
+    }
+
+    #date {
+      font-size: 20px;
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    #clock {
+      font-size: 20px;
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    .blink {
+      animation: blink 1s step-start infinite;
+    }
+    
+    /* ===== Layout cho tab Control ===== */
+    .control-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    /* Cột trái chứa 2 card điều khiển */
+    .control-left {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    /* Cột phải chứa bảng cảnh báo */
+    .control-right {
+      flex: 2;
+      background-color: #1e1e1e;
+      border-radius: 16px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    /* Style cho bảng cảnh báo */
+    .alert-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 20px;
+      margin-top: 8px;
+    }
+
+    .alert-table th, .alert-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #444;
+      text-align: left;
+    }
+
+    .alert-table th {
+      background-color: #111;
+      color: #00bcd4;
+      font-weight: 600;
+    }
+
+    .alert-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .alert-table td.level-warning {
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .alert-table td.level-critical {
+      color: #f44336;
+      font-weight: 600;
+    }
+
+    .alert-table td.level-normal {
+      color: #4caf50;
+      font-weight: 600;
+    }
+
+    .alert-table tbody::-webkit-scrollbar {
+      width: 6px;
+    }
+    .alert-table tbody::-webkit-scrollbar-thumb {
+      background-color: #666;
+      border-radius: 3px;
+    }
