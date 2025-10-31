@@ -1,5 +1,7 @@
 const alertTableBody = document.querySelector("#alertTable tbody");
 
+    const ESP_IP = "http://192.168.1.28";
+
     function addAlert(level, message) {
       // Xóa dòng "Chưa có cảnh báo nào"
       const emptyRow = alertTableBody.querySelector(".empty");
@@ -88,11 +90,11 @@ const alertTableBody = document.querySelector("#alertTable tbody");
 
     function sendServo(angle) {
         // IP Gửi góc servo đến server
-      fetch(`/servo?angle=${angle}`).then(r => r.text()).then(console.log);
+      fetch(`${ESP_IP}/servo?angle=${angle}`).then(r => r.text()).then(console.log);
     }
     function sendRelay(state) {
         // IP Gửi trạng thái relay đến server
-      fetch(`/relay?state=${state}`)
+      fetch(`${ESP_IP}/relay?state=${state}`)
         .then(r => r.text())
         .then(t => {
           console.log("Relay:", state);
@@ -105,7 +107,7 @@ const alertTableBody = document.querySelector("#alertTable tbody");
     async function updateSensors() {
       try {
         // IP Fetch dữ liệu cảm biến từ server
-        const res = await fetch("/sensor");
+        const res = await fetch(`${ESP_IP}/sensor`);
         const data = await res.json();
 
         const time = new Date().toLocaleTimeString();
@@ -156,7 +158,7 @@ const alertTableBody = document.querySelector("#alertTable tbody");
   async function updateWarnings() {
     try {
     // IP Fetch cảnh báo từ server
-      const res = await fetch("/warning");
+      const res = await fetch(`${ESP_IP}/warning`);
       const data = await res.json();
 
       const tableBody = document.querySelector("#alertTable tbody");
