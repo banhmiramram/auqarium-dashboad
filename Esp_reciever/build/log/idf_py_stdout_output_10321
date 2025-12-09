@@ -1,0 +1,92 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/hiep/Hiep/Esp_reciever/build/bootloader/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/hiep/Hiep/Esp_reciever/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mqtt/mqtt_client.c.obj
+[6/11] Linking C static library esp-idf/main/libmain.a
+[7/11] Generating ld/sections.ld
+info: INFO: Symbol IDF_TARGET_LINUX defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /home/hiep/esp-idf/Kconfig:78
+    /home/hiep/esp-idf/Kconfig:162
+[8/11] Linking CXX executable ESP_RECIEVER.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/hiep/Hiep/Esp_reciever/build/ESP_RECIEVER.bin
+[10/11] cd /home/hiep/Hiep/Esp_reciever/build/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hiep/Hiep/Esp_reciever/build/partition_table/partition-table.bin /home/hiep/Hiep/Esp_reciever/build/ESP_RECIEVER.bin
+ESP_RECIEVER.bin binary size 0xef590 bytes. Smallest app partition is 0x100000 bytes. 0x10a70 bytes (7%) free.
+[10/11] cd /home/hiep/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/hiep/esp-idf -D "SERIAL_TOOL=/home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/hiep/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/hiep/Hiep/Esp_reciever/build -P /home/hiep/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB1 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 ESP_RECIEVER.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyUSB1
+Connecting............
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 10:06:1c:86:ce:80
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000fffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16357...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16357 compressed) at 0x00001000 in 0.6 seconds (effective 364.4 kbit/s)...
+Hash of data verified.
+Compressed 980368 bytes to 613895...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e5ee... (5 %)
+Writing at 0x0002889a... (7 %)
+Writing at 0x0002d692... (10 %)
+Writing at 0x000346ad... (13 %)
+Writing at 0x0003f1bb... (15 %)
+Writing at 0x00044bbd... (18 %)
+Writing at 0x0004a864... (21 %)
+Writing at 0x000506de... (23 %)
+Writing at 0x00056463... (26 %)
+Writing at 0x0005c42b... (28 %)
+Writing at 0x00061f98... (31 %)
+Writing at 0x00067ea0... (34 %)
+Writing at 0x0006e421... (36 %)
+Writing at 0x00074038... (39 %)
+Writing at 0x00079dfc... (42 %)
+Writing at 0x0007f0f0... (44 %)
+Writing at 0x000843cc... (47 %)
+Writing at 0x00089b2a... (50 %)
+Writing at 0x0008f2be... (52 %)
+Writing at 0x000945de... (55 %)
+Writing at 0x00099cd7... (57 %)
+Writing at 0x0009fbf1... (60 %)
+Writing at 0x000a56ca... (63 %)
+Writing at 0x000ab06e... (65 %)
+Writing at 0x000b0b87... (68 %)
+Writing at 0x000b6958... (71 %)
+Writing at 0x000bc193... (73 %)
+Writing at 0x000c1f16... (76 %)
+Writing at 0x000c7a6f... (78 %)
+Writing at 0x000cd386... (81 %)
+Writing at 0x000d3cfd... (84 %)
+Writing at 0x000df06b... (86 %)
+Writing at 0x000e5673... (89 %)
+Writing at 0x000eb847... (92 %)
+Writing at 0x000f11cd... (94 %)
+Writing at 0x000f7702... (97 %)
+Writing at 0x000fc9db... (100 %)
+Wrote 980368 bytes (613895 compressed) at 0x00010000 in 14.1 seconds (effective 555.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 875.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

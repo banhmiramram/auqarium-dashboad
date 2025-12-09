@@ -1,0 +1,110 @@
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sensor/sensor.c.obj
+In file included from /home/hiep/Hiep/Esp_sender/main/sensor/sensor.c:2:
+/home/hiep/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+/home/hiep/Hiep/Esp_sender/main/sensor/sensor.c: In function 'sensor_init':
+/home/hiep/Hiep/Esp_sender/main/sensor/sensor.c:19:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   19 |     adc1_config_channel_atten(PH_PIN,   ADC_ATTEN_DB_11);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/hiep/esp-idf/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from /home/hiep/esp-idf/components/driver/deprecated/driver/adc.h:15:
+/home/hiep/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+/home/hiep/Hiep/Esp_sender/main/sensor/sensor.c:20:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   20 |     adc1_config_channel_atten(TDS_PIN,  ADC_ATTEN_DB_11);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/hiep/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+/home/hiep/Hiep/Esp_sender/main/sensor/sensor.c:21:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   21 |     adc1_config_channel_atten(TURB_PIN, ADC_ATTEN_DB_11);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/hiep/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/hiep/Hiep/Esp_sender/build/bootloader/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/hiep/Hiep/Esp_sender/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[3/10] No install step for 'bootloader'
+[4/10] Linking C static library esp-idf/main/libmain.a
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+info: INFO: Symbol IDF_TARGET_LINUX defined in multiple locations (see below). Please check if this is a correct behavior or a random name match:
+    /home/hiep/esp-idf/Kconfig:162
+    /home/hiep/esp-idf/Kconfig:78
+[7/10] Linking CXX executable ESP_SENDER.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/hiep/Hiep/Esp_sender/build/ESP_SENDER.bin
+[9/10] cd /home/hiep/Hiep/Esp_sender/build/esp-idf/esptool_py && /home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/hiep/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/hiep/Hiep/Esp_sender/build/partition_table/partition-table.bin /home/hiep/Hiep/Esp_sender/build/ESP_SENDER.bin
+ESP_SENDER.bin binary size 0xc4110 bytes. Smallest app partition is 0x100000 bytes. 0x3bef0 bytes (23%) free.
+[9/10] cd /home/hiep/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/hiep/esp-idf -D "SERIAL_TOOL=/home/hiep/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/hiep/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/hiep/Hiep/Esp_sender/build -P /home/hiep/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB1 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 ESP_SENDER.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyUSB1
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c8:2e:18:25:fa:60
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16357...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16357 compressed) at 0x00001000 in 0.5 seconds (effective 397.2 kbit/s)...
+Hash of data verified.
+Compressed 803088 bytes to 508939...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c7a6... (6 %)
+Writing at 0x00022e99... (9 %)
+Writing at 0x00028147... (12 %)
+Writing at 0x00031792... (15 %)
+Writing at 0x0003715a... (18 %)
+Writing at 0x0003d23e... (21 %)
+Writing at 0x000430a6... (25 %)
+Writing at 0x00048e34... (28 %)
+Writing at 0x0004f205... (31 %)
+Writing at 0x00054702... (34 %)
+Writing at 0x000599a5... (37 %)
+Writing at 0x0005ee1c... (40 %)
+Writing at 0x000646ec... (43 %)
+Writing at 0x00069c4e... (46 %)
+Writing at 0x0006ef2b... (50 %)
+Writing at 0x000745f7... (53 %)
+Writing at 0x0007a4e9... (56 %)
+Writing at 0x0007fc4c... (59 %)
+Writing at 0x000858ed... (62 %)
+Writing at 0x0008b518... (65 %)
+Writing at 0x00090d62... (68 %)
+Writing at 0x00096ac4... (71 %)
+Writing at 0x0009c532... (75 %)
+Writing at 0x000a1f55... (78 %)
+Writing at 0x000abc09... (81 %)
+Writing at 0x000b34a5... (84 %)
+Writing at 0x000bce47... (87 %)
+Writing at 0x000c28a7... (90 %)
+Writing at 0x000c860b... (93 %)
+Writing at 0x000ce2cd... (96 %)
+Writing at 0x000d3a46... (100 %)
+Wrote 803088 bytes (508939 compressed) at 0x00010000 in 11.5 seconds (effective 558.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 1223.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

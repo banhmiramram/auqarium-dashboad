@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Aquarium Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <img src="https://dut.udn.vn/Files/admin/images/Tin_tuc/Khac/2020/LogoDUT/image002.jpg" alt="Logo Bách Khoa Đà Nẵng">
+    <h1>Aquarium Dashboard</h1>
+    <div id="clockBox">
+      <div id="date"><span class="icon">📅</span> <span id="dateText"></span></div>
+      <div id="clock"><span class="icon">🕒</span> <span id="clockText"></span></div>
+    </div>
+  </header>
+
+  <nav>
+    <button id="tabSensor" class="active" onclick="showTab('sensorTab', this)">📊 Monitor</button>
+    <button id="tabServo" onclick="showTab('servoTab', this)">⚙️ Control</button>
+  </nav>
+
+  <!-- TAB GIÁM SÁT -->
+  <div id="sensorTab" class="content active-tab">
+    <div class="sensor-layout">
+      <div class="sensor-column">
+        <div class="sensor-card">
+          <h3>Temperature</h3>
+          <div id="tempVal" class="sensor-value">-- °C</div>
+          <canvas id="tempMini"></canvas>
+        </div>
+        <div class="sensor-card">
+          <h3>pH</h3>
+          <div id="phVal" class="sensor-value">--</div>
+          <canvas id="phMini"></canvas>
+        </div>
+        <div class="sensor-card">
+          <h3>TDS</h3>
+          <div id="tdsVal" class="sensor-value">-- ppm</div>
+          <canvas id="tdsMini"></canvas>
+        </div>
+        <div class="sensor-card">
+          <h3>Turbidity</h3>
+          <div id="turbVal" class="sensor-value">-- NTU</div>
+          <canvas id="turbMini"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="sensorChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB CONTROL -->
+  <div id="servoTab" class="content">
+    <div class="control-layout">
+      <div class="control-left">
+        <div class="card schedule-card">
+          <h2>Đặt lịch bật servo tự động</h2>
+
+          <div class="schedule-row">
+            <span class="schedule-label">Giờ bật</span>
+            <input id="servoOnTime" type="time" class="schedule-input">
+          </div>
+
+          <div class="schedule-row">
+            <span class="schedule-label">Bật servo trong</span>
+            <div class="schedule-duration">
+              <div class="schedule-field">
+                <input id="servoMin" type="number" min="0" value="0" class="schedule-input">
+                <span class="schedule-unit">phút</span>
+              </div>
+              <div class="schedule-field">
+                <input id="servoSec" type="number" min="0" value="30" class="schedule-input">
+                <span class="schedule-unit">giây</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-primary schedule-btn" onclick="setServoSchedule()">Đặt lịch</button>
+
+          <p id="servoScheduleStatus" class="schedule-status">
+            Chưa có lịch nào
+          </p>
+        </div>
+
+        <div class="card relay-card">
+          <h2>Control Relay</h2>
+
+          <div class="relay-actions">
+            <button class="relay-btn relay-btn-on" onclick="sendRelay('on')">
+              Turn ON
+            </button>
+            <button class="relay-btn relay-btn-off" onclick="sendRelay('off')">
+              Turn OFF
+            </button>
+          </div>
+
+          <p id="relayStatus" class="relay-status">Status: --</p>
+        </div>
+
+      <div class="control-right">
+        <div class="card">
+          <h2>⚠️ Lịch sử cảnh báo</h2>
+          <table id="alertTable" class="alert-table">
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Loại cảnh báo</th>
+                <th>Thông điệp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="empty"><td colspan="3">Chưa có cảnh báo nào</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "tft/tft.c"
+        "tft/display_task.c"
+        "espnow_recv/espnow_recv.c"
+        "espnow_recv/espnow_task.c"
+        "servo/feeder.c"
+        "wifi/wifi.c"
+        "wifi/wifi_task.c"
+        "motor/motor.c"
+        "global/global.c"
+        "manager_task/manager.c"
+        "mqtt/mqtt_client.c"
+
+    INCLUDE_DIRS 
+        "." 
+        "servo"
+        "wifi"
+        "motor"
+        "tft"
+        "espnow_recv"
+        "global"
+        "manager_task"
+        "mqtt"
+
+    REQUIRES 
+        esp_lcd
+        driver
+        esp_wifi
+        esp_event
+        esp_netif
+        nvs_flash
+        freertos
+        mqtt
+        cJSON_IDF
+)
